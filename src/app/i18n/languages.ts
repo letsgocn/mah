@@ -15,8 +15,8 @@ export const LANGUAGES: { [name: string]: { title: string; data: { [key: string]
 	pt: {title: 'Português', data: LANG_PT},
 	ru: {title: 'русский', data: LANG_RU},
 	es: {title: 'Español', data: LANG_ES},
-	eu: {title: 'Euskara', data: LANG_EU}
-	jp: {title: 'Euskara', data: LANG_JP}
+	eu: {title: 'Euskara', data: LANG_EU},
+	jp: {title: '日本語', data: LANG_JP},
 };
 
 export const LANGUAGE_TITLES = Object.keys(LANGUAGES).map(key => ({key, title: LANGUAGES[key].title}));
