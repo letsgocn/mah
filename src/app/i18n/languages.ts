@@ -5,6 +5,7 @@ import * as LANG_PT from './pt.json';
 import * as LANG_RU from './ru.json';
 import * as LANG_ES from './es.json';
 import * as LANG_EU from './eu.json';
+import * as LANG_JP from './jp.json';
 
 export const DEFAULT_LANGUAGE = 'de';
 export const LANGUAGES: { [name: string]: { title: string; data: { [key: string]: string } } } = {
@@ -15,6 +16,7 @@ export const LANGUAGES: { [name: string]: { title: string; data: { [key: string]
 	ru: {title: 'русский', data: LANG_RU},
 	es: {title: 'Español', data: LANG_ES},
 	eu: {title: 'Euskara', data: LANG_EU}
+	jp: {title: 'Euskara', data: LANG_JP}
 };
 
 export const LANGUAGE_TITLES = Object.keys(LANGUAGES).map(key => ({key, title: LANGUAGES[key].title}));
