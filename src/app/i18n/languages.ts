@@ -6,11 +6,13 @@ import * as LANG_RU from './ru.json';
 import * as LANG_ES from './es.json';
 import * as LANG_EU from './eu.json';
 import * as LANG_JP from './jp.json';
+import * as LANG_JP from './fr.json';
 
-export const DEFAULT_LANGUAGE = 'de';
+export const DEFAULT_LANGUAGE = 'fr';
 export const LANGUAGES: { [name: string]: { title: string; data: { [key: string]: string } } } = {
 	en: {title: 'English', data: LANG_EN},
 	de: {title: 'Deutsch', data: LANG_DE},
+	fr: {title: 'Français', data: LANG_FR},
 	nl: {title: 'Nederlands', data: LANG_NL},
 	pt: {title: 'Português', data: LANG_PT},
 	ru: {title: 'русский', data: LANG_RU},
