@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh">
+<html lang="en">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
@@ -18,6 +18,7 @@
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="msapplication-config" content="assets/app/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+	<script src="https://cdn.tailwindcss.com"></script>
 	<style>
 		html,body, app-root { background: #2b424f; height: 100svh; height: 100svh; margin: 0;}
 		.splash { height: 100%; display: flex; justify-content: center; align-items: center;}
@@ -83,33 +84,392 @@
 				transform: rotate(360deg);
 			}
 		}
-		.game-container {
-			display: flex;
-			flex-direction: column;
-			height: 100svh;
-		}
-		
-		.description-module {
-			background: #1f313b;
-			color: white;
-			padding: 20px;
-			margin-top: auto;
-			font-family: 'Kulim Park', sans-serif;
-			font-size: 14px;
-			line-height: 1.5;
-		}
 	</style>
 </head>
 <body>
-	
+<app-root>
+	<div class="splash">
+		<div class="loading">
+			LOAD "APP_NAME",8,1<br/>LOADING…<br/>
+			<div class="loader"></div>
+		</div>
+	</div>
+</app-root>
 
-	<app-root>
-		<div class="splash">Loading...</div>
-	</app-root>
+	<!-- 新增麻将介绍内容 -->
+	<div class="bg-white py-12">
+		<!-- Hero部分 -->
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<h1 class="text-4xl font-bold text-gray-900">
+					Jeux gratuits de Mahjong Solitaire en ligne
+				</h1>
+				<p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+					Ceci est un jeu de Mahjong Solitaire classique en ligne avec un nombre de parties illimité. Open-source, entièrement gratuit, sans publicités, sans suivi, sans téléchargement et sans installation requise.
+				</p>
+			</div>
+		</div>
 
-	<div class="description-module">
-		在这里添加你的游戏说明文字
+		<!-- Features部分 -->
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+			<h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Fonctionnalités</h2>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<!-- Feature Card 1 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<div class="flex items-center mb-4">
+						<svg class="h-6 w-6 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+						<h3 class="text-xl font-semibold text-white">56 plateaux de jeu</h3>
+					</div>
+					<p class="text-gray-400">Une grande variété de plateaux pour une expérience de jeu diversifiée.</p>
+				</div>
+
+				<!-- Feature Card 2 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<div class="flex items-center mb-4">
+						<svg class="h-6 w-6 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+						<h3 class="text-xl font-semibold text-white">12 ensembles de tuiles</h3>
+					</div>
+					<p class="text-gray-400">Ensembles d'images de tuiles/pions différents : clairs et foncés</p>
+				</div>
+
+				<!-- Feature Card 3 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<div class="flex items-center mb-4">
+						<svg class="h-6 w-6 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+						<h3 class="text-xl font-semibold text-white">8 thèmes de jeu</h3>
+					</div>
+					<p class="text-gray-400">Arrière-plans et thèmes de jeu : clairs et foncés</p>
+				</div>
+
+				<!-- Feature Card 4 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<div class="flex items-center mb-4">
+						<svg class="h-6 w-6 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+						<h3 class="text-xl font-semibold text-white">3 niveaux de difficulté</h3>
+					</div>
+					<p class="text-gray-400">Adaptez le jeu à votre niveau d'expertise</p>
+				</div>
+
+				<!-- Feature Card 5 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<div class="flex items-center mb-4">
+						<svg class="h-6 w-6 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+						</svg>
+						<h3 class="text-xl font-semibold text-white">Sauvegarde automatique</h3>
+					</div>
+					<p class="text-gray-400">Sauvegarde et restauration automatiques de l'état du jeu</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Règles du Mahjong部分 -->
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+			<h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Règles du Mahjong Solitaire</h2>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<!-- But du jeu -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-xl font-bold text-white mb-4">1. But du jeu</h3>
+					<ul class="space-y-3 text-gray-400">
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Éliminer toutes les tuiles du plateau en formant des paires identiques
+						</li>
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Les tuiles doivent être parfaitement identiques pour pouvoir être associées
+						</li>
+					</ul>
+				</div>
+
+				<!-- Règles d'association -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-xl font-bold text-white mb-4">2. Règles d'association</h3>
+					<ul class="space-y-3 text-gray-400">
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Seules les tuiles "libres" sont jouables (non entièrement recouvertes par d'autres tuiles)
+						</li>
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Les deux tuiles identiques doivent pouvoir être reliées par un maximum de 3 segments droits
+						</li>
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Le tracé ne doit pas comporter plus de 2 changements de direction
+						</li>
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Le chemin reliant les tuiles doit être libre de tout obstacle
+						</li>
+					</ul>
+				</div>
+
+				<!-- Déroulement du jeu -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-xl font-bold text-white mb-4">3. Déroulement du jeu</h3>
+					<ul class="space-y-3 text-gray-400">
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Sélectionnez une première tuile en cliquant dessus
+						</li>
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Cliquez ensuite sur une deuxième tuile identique pour tenter l'association
+						</li>
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Si la connexion est possible, les deux tuiles disparaissent
+						</li>
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Si la connexion est impossible, choisissez d'autres tuiles
+						</li>
+					</ul>
+				</div>
+
+				<!-- Conseils tactiques -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-xl font-bold text-white mb-4">4. Conseils tactiques</h3>
+					<ul class="space-y-3 text-gray-400">
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Commencez par éliminer les tuiles supérieures pour dégager celles du dessous
+						</li>
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Analysez bien l'ensemble du plateau pour planifier votre stratégie
+						</li>
+						<li class="flex items-start">
+							<span class="text-white mr-2">•</span>
+							Certaines configurations n'ont pas de solution, n'hésitez pas à recommencer la partie
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- FAQ部分 -->
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+			<h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Questions Fréquentes</h2>
+			<dl class="mt-6 space-y-8">
+				<!-- Question 1 -->
+				<div class="bg-slate-700 rounded-lg p-6">
+					<dt class="text-xl font-medium text-white">Qu'est-ce que le Mahjong Solitaire ?</dt>
+					<dd class="mt-3 text-gray-400">Le Mahjong Solitaire est une variante en solitaire du jeu de Mahjong traditionnel chinois. Contrairement au jeu original qui se joue à quatre joueurs, cette version se joue seul. Le but est d'éliminer toutes les tuiles du plateau en associant des paires identiques selon des règles spécifiques de connexion.</dd>
+				</div>
+
+				<!-- Question 2 -->
+				<div class="bg-slate-700 rounded-lg p-6">
+					<dt class="text-xl font-medium text-white">En quoi ce jeu diffère-t-il du Mahjong traditionnel ?</dt>
+					<dd class="mt-3 text-gray-400">Bien qu'il utilise les mêmes tuiles, le Mahjong Solitaire est très différent du Mahjong traditionnel. Dans la version traditionnelle, 4 joueurs construisent des combinaisons comme au rami. Le Solitaire est un jeu d'association de paires, plus proche d'un puzzle ou d'un jeu de concentration.</dd>
+				</div>
+
+				<!-- Question 3 -->
+				<div class="bg-slate-700 rounded-lg p-6">
+					<dt class="text-xl font-medium text-white">Toutes les parties peuvent-elles être gagnées ?</dt>
+					<dd class="mt-3 text-gray-400">Non, certaines configurations peuvent devenir impossibles à résoudre en fonction de l'ordre dans lequel les tuiles sont retirées. C'est pourquoi le jeu propose une fonction "Suggestion" et la possibilité de défaire des coups ou de mélanger les tuiles restantes.</dd>
+				</div>
+
+				<!-- Question 4 -->
+				<div class="bg-slate-700 rounded-lg p-6">
+					<dt class="text-xl font-medium text-white">Comment puis-je améliorer mon jeu ?</dt>
+					<dd class="mt-3 text-gray-400">
+						<ul class="list-disc pl-5 space-y-2">
+							<li>Commencez par les tuiles du dessus pour libérer celles du dessous</li>
+							<li>Gardez un œil sur les tuiles uniques (Fleurs et Saisons)</li>
+							<li>Essayez de garder les zones de jeu équilibrées</li>
+							<li>Utilisez la fonction "Aperçu" pour voir toutes les tuiles disponibles</li>
+							<li>N'hésitez pas à utiliser la fonction "Annuler" si vous faites une erreur</li>
+						</ul>
+					</dd>
+				</div>
+
+				<!-- Question 5 -->
+				<div class="bg-slate-700 rounded-lg p-6">
+					<dt class="text-xl font-medium text-white">Le jeu sauvegarde-t-il ma progression ?</dt>
+					<dd class="mt-3 text-gray-400">Oui, le jeu sauvegarde automatiquement votre progression. Si vous quittez une partie en cours, vous pourrez la reprendre exactement là où vous l'aviez laissée lors de votre prochaine visite. Vos statistiques et meilleurs scores sont également sauvegardés localement.</dd>
+				</div>
+
+				<!-- Question 6 -->
+				<div class="bg-slate-700 rounded-lg p-6">
+					<dt class="text-xl font-medium text-white">Puis-je jouer hors ligne ?</dt>
+					<dd class="mt-3 text-gray-400">Oui, une fois que vous avez chargé le jeu une première fois, il est entièrement jouable hors ligne. L'application utilise la technologie Progressive Web App (PWA), ce qui signifie que vous pouvez même l'installer sur votre appareil et y jouer sans connexion internet.</dd>
+				</div>
+			</dl>
+		</div>
+
+		<!-- Types of Tiles部分 -->
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+			<h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Types of Tiles</h2>
+			
+			<!-- 介绍文字 -->
+			<p class="text-gray-600 text-center mb-12 max-w-4xl mx-auto">
+				The tiles are made up of symbols, circles, bamboo, winds, dragons, seasons and flowers. The tiles to be matched should be likewise, with the exception being flowers and seasons. The combination of season and flowers will be considered a pair if matched according to suit and if there is only one of each tile available.
+			</p>
+
+			<!-- 牌型分类 -->
+			<div class="space-y-12">
+				<!-- Symbols部分 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-2xl font-bold text-white mb-6 text-center">Symboles</h3>
+					<div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-4 justify-items-center">
+						<img src="assets/svg/classic/Char_1.png" alt="Symbol 1" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Char_2.png" alt="Symbol 2" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Char_3.png" alt="Symbol 3" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Char_4.png" alt="Symbol 4" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Char_5.png" alt="Symbol 5" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Char_6.png" alt="Symbol 6" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Char_7.png" alt="Symbol 7" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Char_8.png" alt="Symbol 8" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Char_9.png" alt="Symbol 9" class="w-16 h-20 object-contain">
+					</div>
+				</div>
+
+				<!-- Circles部分 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-2xl font-bold text-white mb-6 text-center">Cercles</h3>
+					<div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-4 justify-items-center">
+						<img src="assets/svg/classic/Wheel_1.png" alt="Circle 1" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Wheel_2.png" alt="Circle 2" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Wheel_3.png" alt="Circle 3" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Wheel_4.png" alt="Circle 4" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Wheel_5.png" alt="Circle 5" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Wheel_6.png" alt="Circle 6" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Wheel_7.png" alt="Circle 7" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Wheel_8.png" alt="Circle 8" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Wheel_9.png" alt="Circle 9" class="w-16 h-20 object-contain">
+					</div>
+				</div>
+
+				<!-- Bamboo部分 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-2xl font-bold text-white mb-6 text-center">Bambou</h3>
+					<div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-4 justify-items-center">
+						<img src="assets/svg/classic/Bamboo_1.png" alt="Bamboo 1" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Bamboo_2.png" alt="Bamboo 2" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Bamboo_3.png" alt="Bamboo 3" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Bamboo_4.png" alt="Bamboo 4" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Bamboo_5.png" alt="Bamboo 5" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Bamboo_6.png" alt="Bamboo 6" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Bamboo_7.png" alt="Bamboo 7" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Bamboo_8.png" alt="Bamboo 8" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Bamboo_9.png" alt="Bamboo 9" class="w-16 h-20 object-contain">
+					</div>
+				</div>
+
+				<!-- Winds部分 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-2xl font-bold text-white mb-6 text-center">Les vents</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center max-w-2xl mx-auto">
+						<img src="assets/svg/classic/wind-east.png" alt="East Wind" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/wind-south.png" alt="South Wind" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/wind-west.png" alt="West Wind" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/wind-north.png" alt="North Wind" class="w-16 h-20 object-contain">
+					</div>
+				</div>
+
+				<!-- Dragons部分 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-2xl font-bold text-white mb-6 text-center">Dragons</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center max-w-2xl mx-auto">
+						<img src="assets/svg/classic/Dragon_Red.png" alt="Red Dragon" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Dragon_Green.png" alt="Green Dragon" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Dragon_White.png" alt="White Dragon" class="w-16 h-20 object-contain">
+					</div>
+				</div>
+
+				<!-- Flowers部分 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-2xl font-bold text-white mb-6 text-center">Fleurs</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center max-w-2xl mx-auto">
+						<img src="assets/svg/classic/Flower_Plum.png" alt="Plum Flower" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Flower_Orchid.png" alt="Orchid Flower" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Flower_Chrysanthemum.png" alt="Chrysanthemum Flower" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Flower_Bamboo.png" alt="Bamboo Flower" class="w-16 h-20 object-contain">
+					</div>
+				</div>
+
+				<!-- Seasons部分 -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-2xl font-bold text-white mb-6 text-center">Saisons</h3>
+					<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center max-w-2xl mx-auto">
+						<img src="assets/svg/classic/Season_Spring.png" alt="Spring Season" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Season_Summer.png" alt="Summer Season" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Season_Autumn.png" alt="Autumn Season" class="w-16 h-20 object-contain">
+						<img src="assets/svg/classic/Season_Winter.png" alt="Winter Season" class="w-16 h-20 object-contain">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+		<!-- About部分 -->
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-16">
+			<h2 class="text-3xl font-bold text-gray-900 text-center">À propos du Mahjong</h2>
+			<div class="mt-8 space-y-8">
+				<!-- Histoire -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-2xl font-bold text-white mb-4">Histoire et Origines</h3>
+					<p class="text-gray-400">Le Mahjong est né en Chine il y a plus de 2000 ans. Initialement réservé à l'élite de la société chinoise, il s'est progressivement démocratisé pour devenir l'un des jeux les plus populaires en Asie. La version solitaire que nous connaissons aujourd'hui a été créée dans les années 1980 pour les ordinateurs personnels, offrant une nouvelle façon de profiter des magnifiques tuiles traditionnelles.</p>
+				</div>
+
+				<!-- Signification Culturelle -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-2xl font-bold text-white mb-4">Signification Culturelle</h3>
+					<p class="text-gray-400">Les symboles et motifs du Mahjong sont profondément ancrés dans la culture chinoise. Chaque tuile raconte une histoire : les Dragons représentent la puissance, les Vents symbolisent les points cardinaux, les Saisons évoquent le cycle de la vie, et les Fleurs célèbrent la beauté de la nature. Cette richesse symbolique fait du Mahjong bien plus qu'un simple jeu - c'est une fenêtre sur la culture asiatique.</p>
+				</div>
+
+				<!-- Impact Moderne -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-2xl font-bold text-white mb-4">Impact Moderne</h3>
+					<p class="text-gray-400">Aujourd'hui, le Mahjong Solitaire est devenu un phénomène mondial, apprécié pour ses qualités méditatives et son défi intellectuel. Il combine harmonieusement tradition et modernité, offrant une expérience de jeu qui stimule la concentration, la mémoire et la réflexion stratégique. Sa version numérique permet à des millions de joueurs à travers le monde de découvrir et d'apprécier cet héritage culturel unique.</p>
+				</div>
+
+				<!-- Bienfaits -->
+				<div class="bg-slate-700 rounded-lg p-6 shadow-lg">
+					<h3 class="text-2xl font-bold text-white mb-4">Bienfaits du Jeu</h3>
+					<div class="text-gray-400 space-y-4">
+						<p>Le Mahjong Solitaire offre de nombreux avantages cognitifs :</p>
+						<ul class="list-disc pl-5 space-y-2">
+							<li>Amélioration de la concentration et de la mémoire</li>
+							<li>Développement des capacités d'observation</li>
+							<li>Stimulation de la pensée stratégique</li>
+							<li>Réduction du stress et relaxation mentale</li>
+							<li>Maintien de l'agilité mentale à tout âge</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
+	<!-- Footer -->
+	<footer class="mt-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<!-- ... 其他 footer 内容保持不变 ... -->
+			</div>
+
+			<!-- 版权信息 -->
+			<div class="mt-8 pt-8 border-t border-slate-700">
+				<p class="text-center text-sm text-slate-400">
+					© 2024 Mahjong Solitaire. Tous droits réservés.
+				</p>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
