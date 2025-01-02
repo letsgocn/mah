@@ -83,148 +83,33 @@
 				transform: rotate(360deg);
 			}
 		}
-		.help-button {
-			position: fixed;
-			top: 35px;
-			left: 10px;
-			z-index: 1000;
-			width: 32px;
-			height: 32px;
-			padding: 0;
-			border: none;
-			background: none;
-			cursor: pointer;
+		.game-container {
 			display: flex;
-			align-items: center;
-			justify-content: center;
+			flex-direction: column;
+			height: 100svh;
 		}
-
-		.help-icon {
-			width: 32px;
-			height: 32px;
-			fill: #4a90e2;
-			opacity: 0.8;
-			transition: opacity 0.2s ease, transform 0.2s ease;
-		}
-
-		.help-button:hover .help-icon {
-			opacity: 1;
-			transform: scale(1.1);
-		}
-
-		.help-modal {
-			display: none;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0,0,0,0.5);
-			z-index: 1001;
-		}
-
-		.help-modal.show {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		.modal-content {
-			background: #fff;
-			padding: 30px;
-			border-radius: 8px;
-			max-width: 600px;
-			width: 90%;
-			max-height: 80vh;
-			overflow-y: auto;
-			position: relative;
-		}
-
-		.close-button {
-			position: absolute;
-			top: 15px;
-			right: 15px;
-			background: none;
-			border: none;
-			font-size: 24px;
-			cursor: pointer;
-			color: #666;
-		}
-
-		.close-button:hover {
-			color: #333;
+		
+		.description-module {
+			background: #1f313b;
+			color: white;
+			padding: 20px;
+			margin-top: auto;
+			font-family: 'Kulim Park', sans-serif;
+			font-size: 14px;
+			line-height: 1.5;
 		}
 	</style>
 </head>
 <body>
-	<button class="help-button" aria-label="游戏帮助" onclick="toggleModal()">
-		<svg width="800px" height="800px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-
-			<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-			
-			<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-			
-			<g id="SVGRepo_iconCarrier">
-			
-			<path d="M789.333333 853.333333H234.666667l-128 128V256c0-70.4 57.6-128 128-128h554.666666c70.4 0 128 57.6 128 128v469.333333c0 70.4-57.6 128-128 128z" fill="#47b00a"/>
-			
-			<path d="M469.333333 426.666667h85.333334v234.666666h-85.333334z" fill="#FFFFFF"/>
-			
-			<path d="M512 320m-42.666667 0a42.666667 42.666667 0 1 0 85.333334 0 42.666667 42.666667 0 1 0-85.333334 0Z" fill="#FFFFFF"/>
-			
-			</g>
-			
-			</svg>	</button>
-
-	<div id="helpModal" class="help-modal" onclick="closeModalOnBackground(event)">
-		<div class="modal-content">
-			<button class="close-button" onclick="toggleModal()">&times;</button>
-			<h1>麻将连连看游戏说明</h1>
-			<div class="modal-text">
-				<h2>游戏规则</h2>
-				<p>麻将连连看是一款经典的消除类游戏，玩家需要找出两个相同的麻将牌进行配对消除。</p>
-				
-				<h2>基本玩法</h2>
-				<ul>
-					<li>点击两个相同的麻将牌进行消除</li>
-					<li>可消除的牌必须没有其他牌的阻挡</li>
-					<li>连接路径不能超过三条直线</li>
-					<li>努力在最短时间内消除所有牌</li>
-				</ul>
-
-				<h2>游戏特色</h2>
-				<ul>
-					<li>丰富的布局选择</li>
-					<li>精美的麻将牌面设计</li>
-					<li>自定义背景音乐</li>
-					<li>多语言支持</li>
-					<li>成就系统</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	
 
 	<app-root>
 		<div class="splash">Loading...</div>
 	</app-root>
 
-	<script>
-		function toggleModal() {
-			document.getElementById('helpModal').classList.toggle('show');
-		}
+	<div class="description-module">
+		在这里添加你的游戏说明文字
+	</div>
 
-		function closeModalOnBackground(event) {
-			if (event.target === event.currentTarget) {
-				toggleModal();
-			}
-		}
-
-		// 添加键盘事件支持
-		document.addEventListener('keydown', function(event) {
-			if (event.key === 'Escape') {
-				document.getElementById('helpModal').classList.remove('show');
-			}
-		});
-	</script>
 </body>
 </html>
