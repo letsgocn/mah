@@ -6,7 +6,7 @@ import * as LANG_RU from './ru.json';
 import * as LANG_ES from './es.json';
 import * as LANG_EU from './eu.json';
 import * as LANG_JP from './jp.json';
-import * as LANG_JP from './fr.json';
+import * as LANG_FR from './fr.json';
 
 export const DEFAULT_LANGUAGE = 'fr';
 export const LANGUAGES: { [name: string]: { title: string; data: { [key: string]: string } } } = {
